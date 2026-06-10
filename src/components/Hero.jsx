@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import cv from "../assets/SilviaGamboaMadrigalCV.pdf";
 function Hero() {
   return (
     <motion.section
@@ -25,7 +25,7 @@ function Hero() {
         </a>
 
         <a
-  href="/SilviaGamboaMadrigalCV.pdf"
+  href={cv}
   target="_blank"
   rel="noopener noreferrer"
   className="btn secondary"
