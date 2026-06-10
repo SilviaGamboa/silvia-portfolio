@@ -16,7 +16,7 @@ function Projects() {
       title: "Sistema Hotelero",
       image: hotelMareaAzul,
       description: "Sistema automatizado para el control de reservas, huéspedes y facturación centralizada.",
-      tags: ["Angular", ".NET", "SQL Server", "Docker", "🟢 En Proceso"],
+      tags: ["Angular", ".NET", "SQL Server", "Dapper", "🟢 En Proceso"],
       github: "https://github.com/Vic2002UCR/MareaAzulFrontendAdmin.git",
       // Sin propiedad 'demo' para demostrar que es opcional
     },
