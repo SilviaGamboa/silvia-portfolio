@@ -93,7 +93,7 @@ function Projects() {
                   rel="noopener noreferrer" 
                   className="proj-link git"
                 >
-                  💻 GitHub
+                  GitHub
                 </a>
                 
                 {/* RENDER CONDICIONAL: Solo aparece si 'project.demo' existe */}
@@ -104,7 +104,7 @@ function Projects() {
                     rel="noopener noreferrer" 
                     className="proj-link live"
                   >
-                    🚀 Demo en vivo
+                    Ver
                   </a>
                 )}
               </div>
