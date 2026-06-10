@@ -4,7 +4,7 @@ function Projects() {
   const projects = [
     {
       title: "Proyecto Meliponario – Sede del Atlántico (TC-627) ",
-      image: "/src/assets/proyectoAbejas.png",
+      image: "https://silviagamboa.github.io/silvia-portfolio/src/assets/proyectoAbejas.png",
       description: "Proyecto academico-educativo con informacion sobre las abejas meliponas que hay en la sede del atlantico, con el fin de crear conciencia sobre su importancia y fomentar su conservación.",
       tags: ["PHP", "JavaScript", "🟢 En Proceso"],
       github: "https://github.com/yoselinporras/TCUAbejas.git", // Cambia por tus repos reales
@@ -20,7 +20,7 @@ function Projects() {
     },
     {
       title: "Rick and Morty",
-      image: "/src/assets/rick&morty.png",
+      image: "https://silviagamboa.github.io/silvia-portfolio/src/assets/rick&morty.png",
       description: "Consumo de la API de Rick and Morty para mostrar personajes, el episodio en el que aparecen y su especie.",
       tags: ["Angular", "JavaScript", "Bootstrap", "🔴 Finalizado"],
       github: "https://github.com/SilviaGamboa/paginaRickandMorty.git",
