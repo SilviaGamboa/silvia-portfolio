@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import cv from "../assets/SilviaGamboaMadrigalCV.pdf";
+import cv from "/SilviaGamboaMadrigalCV.pdf"; // Asegúrate de que el PDF esté en esta ruta
 function Hero() {
   return (
     <motion.section
