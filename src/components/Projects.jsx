@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import proyectoAbejas from "../assets/proyectoAbejas.png";
 import rickMorty from "../assets/rick-morty.png";
+import hotelMareaAzul from "../assets/hotelMareaAzul.png";
 function Projects() {
   const projects = [
     {
@@ -13,7 +14,7 @@ function Projects() {
     },
     {
       title: "Sistema Hotelero",
-      image: "https://placehold.co/600x400",
+      image: hotelMareaAzul,
       description: "Sistema automatizado para el control de reservas, huéspedes y facturación centralizada.",
       tags: ["Angular", ".NET", "SQL Server", "Docker", "🟢 En Proceso"],
       github: "https://github.com/Vic2002UCR/MareaAzulFrontendAdmin.git",
