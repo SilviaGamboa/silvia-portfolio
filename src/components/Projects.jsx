@@ -102,7 +102,7 @@ function Projects() {
                     rel="noopener noreferrer" 
                     className="proj-link live"
                   >
-                    🚀 Demo en vivo
+                    🚀 Ver
                   </a>
                 )}
               </div>
