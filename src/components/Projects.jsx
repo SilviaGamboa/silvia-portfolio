@@ -24,7 +24,7 @@ function Projects() {
       title: "Rick and Morty",
       image: rickMorty,
       description: "Consumo de la API de Rick and Morty para mostrar personajes, el episodio en el que aparecen y su especie.",
-      tags: ["Angular", "JavaScript", "Bootstrap", "🔴 Finalizado"],
+      tags: ["React", "JavaScript", "Bootstrap", "🔴 Finalizado"],
       github: "https://github.com/SilviaGamboa/paginaRickandMorty.git",
       demo: "https://silviagamboa.github.io/paginaRickandMorty/"
     }

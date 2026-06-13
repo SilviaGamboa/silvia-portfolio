@@ -197,7 +197,37 @@ nav:hover {
 .nav-links a:hover::after {
   width: 100%;
 }
+/* ========================================
+   ADICIONES PARA NAVBAR RESPONSIVE
+======================================== */
 
+/* Contenedor auxiliar para agrupar los botones de acción a la derecha */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Escondemos el botón de menú en pantallas de escritorio por defecto */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
 /* ========================================
    SECCIONES
 ======================================== */
@@ -263,7 +293,7 @@ section {
 }
 
 /* ========================================
-   BOTONES CON CORRECCIÓN DE MODOS
+   BOTONES 
 ======================================== */
 .btn {
   padding: 16px 32px;
@@ -289,7 +319,7 @@ section {
   box-shadow: 0 15px 30px rgba(124, 58, 237, 0.5);
 }
 
-/* CORRECCIÓN: Botón secundario legible en modo claro y oscuro al hacer hover */
+
 .secondary {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text);
@@ -353,7 +383,7 @@ section:hover h2::after {
 }
 
 /* ========================================
-   CORRECCIÓN: SKILLS (Transparentes y Sin Gris)
+SKILLS 
 ======================================== */
 .skills-grid {
   display: flex;
@@ -401,7 +431,7 @@ section:hover h2::after {
 }
 
 /* ========================================
-   CORRECCIÓN: PROYECTOS (Más pequeños - 3 columnas)
+  PROYECTOS 
 ======================================== */
 .projects-grid {
   display: grid;
@@ -454,9 +484,7 @@ section:hover h2::after {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-/* ========================================
-   PROYECTOS MEJORADOS (Estructura interna)
-======================================== */
+
 .project-content {
   padding: 25px;
   display: flex;
@@ -625,4 +653,79 @@ section:hover h2::after {
   .hero { text-align: center; padding-top: 120px; }
   .hero-buttons { flex-direction: column; width: 100%; }
   .btn { width: 100%; }
+}
+
+
+/* ========================================
+   MEDIA QUERY NAVBAR RESPONSIVE
+======================================== */
+@media (max-width: 710px) {
+  nav {
+    width: 90%;
+    border-radius: 24px;
+    top: 15px;
+    padding: 12px 24px;
+    justify-content: space-between; /* Alinea los extremos equitativamente */
+  }
+
+  /* Muestra el botón hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Animación del botón hamburguesa transformándose en una 'X' */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Menú desplegable móvil */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 12px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    box-shadow: var(--shadow-hover);
+    
+    /* Efecto oculto inicial */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease;
+  }
+
+  /* Adaptación del menú desplegable en modo oscuro */
+  [data-theme="dark"] .nav-links {
+    background: rgba(20, 18, 33, 0.85);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Estado abierto del menú (Gatillado por React) */
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+  }
+
+  /* Ajustes en los enlaces móviles */
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
 }
